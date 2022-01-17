@@ -9,7 +9,7 @@
    -->   </div>
 
       <div class="flex items-center pt-3 pr-3 lg:pl-5">
-        <div class="mdd:flex hidden mdd:divide-x mdd:divide-oswapGreen ml-5"></div>
+        <div class="mdd:flex hidden mdd:divide-x mdd:divide-doneGreen ml-5"></div>
         <Personal :TVL="data.PVL" :PAPR="data.APRs.pAPR" :REWARDS="data.rewardsPending" />
       </div>
       <div class="flex pt-3 pr-3 flex-2 items-start">

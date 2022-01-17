@@ -11,7 +11,7 @@
             </div>
             <div class="flex items-center space-x-1">
               <p class="text-xs">{{this.getToken()['token1'].Symbol}}</p>
-              <p class="text-lg text-oswapGreen">/</p>
+              <p class="text-lg text-doneGreen">/</p>
               <p class="text-xs">{{this.getToken()['token2'].Symbol}}:</p>
               <p class="text-xs">{{balances.lpToken}}</p>
             </div>

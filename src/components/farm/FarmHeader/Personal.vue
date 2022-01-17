@@ -2,15 +2,15 @@
   <div class="flex flex-wrap w-full">
   
     <div class="flex space-x-3 items-center mb-6">
-      <i class="las la-user text-lg dark:text-oswapGreen"></i>
-      <p class="text-oswapGreen-dark dark:text-oswapBlue-light text-sm uppercase">Personal :</p>
+      <i class="las la-user text-lg dark:text-doneGreen"></i>
+      <p class="text-doneGreen-dark dark:text-doneBlue-light text-sm uppercase">Personal :</p>
     </div>
 
     <div class="grid grid-cols-2 gap-3 w-full">
 
       <div class="flex items-center space-x-3 w-full">
         <div class="flex w-12 h-12 items-center justify-center rounded-full bg-slightGray dark:bg-slightDark">
-          <i class="las la-percent text-3xl dark:text-oswapGreen"></i>
+          <i class="las la-percent text-3xl dark:text-doneGreen"></i>
         </div>
         <div class="flex flex-col text-gray-600 dark:text-gray-300">
           <p class="ss:text-md xs:text-md font-extrabold">{{PAPR}}</p>
@@ -20,7 +20,7 @@
 
 <div class="flex items-center space-x-3 w-full">
         <div class="flex w-12 h-12 items-center justify-center rounded-full bg-slightGray dark:bg-slightDark">
-          <i class="las la-dollar-sign text-3xl dark:text-oswapGreen"></i>
+          <i class="las la-dollar-sign text-3xl dark:text-doneGreen"></i>
         </div>
         <div class="flex flex-col text-gray-600 dark:text-gray-300">
           <p class="ss:text-md xs:text-lg font-extrabold">{{prettify(parseFloat(TVL).toFixed(2))}}</p>
@@ -31,7 +31,7 @@
       <div class="grid grid-cols-2 gap-3 w-full">
       <div class="flex items-center space-x-3 w-full mt-6 col-span-2">
         <div class="flex w-12 h-12 items-center justify-center rounded-full bg-slightGray dark:bg-slightDark">
-          <i class="las la-coins text-3xl dark:text-oswapGreen"></i>
+          <i class="las la-coins text-3xl dark:text-doneGreen"></i>
         </div>
         <div class="flex flex-col text-gray-600 dark:text-gray-300">
           <p class="ss:text-xl xs:text-md font-extrabold">{{parseFloat(REWARDS).toFixed(2)}} / $ {{pendingValue}}</p>
@@ -40,7 +40,7 @@
         </div>
       </div>
         <div class="flex flex-col text-gray-600 dark:text-gray-300">
-        <button @click="collectAllButton" class="flex mt-2 h-8 items-center justify-center rounded-md text-oswapGreen bg-slightGray dark:bg-slightDark w-48 hover:bg-oswapGreen hover:text-slightGray dark:hover:text-slightDark dark:hover:bg-oswapGreen">
+        <button @click="collectAllButton" class="flex mt-2 h-8 items-center justify-center rounded-md text-doneGreen bg-slightGray dark:bg-slightDark w-48 hover:bg-doneGreen hover:text-slightGray dark:hover:text-slightDark dark:hover:bg-doneGreen">
             <p class="text-sm">Claim All</p>
           </button>
           </div>
@@ -68,7 +68,7 @@
     },
     data() {
       return {
-        oswapPrice: 0,
+        donePrice: 0,
         usdValue: 0.00
       }
     },
@@ -82,17 +82,17 @@
       }
 
       await setTimeout(async function (){
-        this.oswapPrice = await this.getOswapPrice();
+        this.donePrice = await this.getDonePrice();
       }.bind(this), timeout);
 
       await setInterval(async function(){
-        this.oswapPrice = await this.getOswapPrice();
+        this.donePrice = await this.getDonePrice();
       }.bind(this), 15000)
       
     },
     computed: {
       pendingValue: function() {
-        return this.prettify(String(parseFloat(this.REWARDS * this.oswapPrice).toFixed(2)))
+        return this.prettify(String(parseFloat(this.REWARDS * this.donePrice).toFixed(2)))
       }
     },
     methods: {

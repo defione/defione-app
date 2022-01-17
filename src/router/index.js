@@ -18,7 +18,7 @@ const routes = [
         },
         {
           property: 'og:image',
-          content: 'https://mainnet.app.defione.one/img/oswap_logo.5eef90b2.png'
+          content: 'https://app.defione.finance/img/done_logo.5eef90b2.png'
         },
         {
           name: 'robots',
@@ -140,7 +140,7 @@ const routes = [
         },
         {
           property: 'og:image',
-          content: 'https://mainnet.app.defione.one/img/oswap_logo.5eef90b2.png'
+          content: 'https://app.defione.finance/img/done_logo.5eef90b2.png'
         },
         {
           name: 'robots',

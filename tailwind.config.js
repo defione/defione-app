@@ -53,17 +53,17 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      oswapGreen: {
+      doneGreen: {
         light: '#1bf2ba',
         DEFAULT: '#18d5bb',
         dark: '#13b4ba',
       },
-      oswapBlue: {
+      doneBlue: {
         light: '#109dbb',
         DEFAULT: '#0462b3',
         dark: '#077db5',
       },
-      oswapDark: {
+      doneDark: {
         gray: '#262334',
         DEFAULT: '#2a2138',
         purple: '#241b2e',

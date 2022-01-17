@@ -3,7 +3,7 @@
     <div v-if="toast.title" class="flex">
       <p class="text-sm">{{toast.title}}</p>
     </div>
-    <div v-if="toast.link" class="flex items-start space-x-1 px-2 rounded-lg bg-opacity-100 hover:bg-opacity-5 hover:bg-oswapDark-gray">
+    <div v-if="toast.link" class="flex items-start space-x-1 px-2 rounded-lg bg-opacity-100 hover:bg-opacity-5 hover:bg-doneDark-gray">
       <i class="las la-link pt-2"></i>
       <a target="_blank" :href="toast.href" class="text-xs p-1 px-2 rounded-lg" v-html="toast.msg"></a>
     </div>

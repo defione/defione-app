@@ -1,7 +1,7 @@
 <template>
-  <div id="calculator" class="max-w-screen-xl mx-auto flex flex-1 flex-col items-center oswap-layout xl:px-0 px-3 text-gray-500 pb-16" style="margin-top: 98px">
+  <div id="calculator" class="max-w-screen-xl mx-auto flex flex-1 flex-col items-center done-layout xl:px-0 px-3 text-gray-500 pb-16" style="margin-top: 98px">
       <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
-        <div v-for="(pair, idx) in this.Pools" :key="idx" class="flex flex-none flex-col h-a p-3 st5 st5-all group bg-gradient-to-l dark:from-slightDark from-slightGray to-transparent dark:hover:bg-slightDark hover:bg-slightGray border-l border-oswapGreen rounded-3xl">
+        <div v-for="(pair, idx) in this.Pools" :key="idx" class="flex flex-none flex-col h-a p-3 st5 st5-all group bg-gradient-to-l dark:from-slightDark from-slightGray to-transparent dark:hover:bg-slightDark hover:bg-slightGray border-l border-doneGreen rounded-3xl">
           <div class="flex flex-none space-x-2 items-center">
             <div class="relative w-20">
               <div class="absolute top-0 bottom-0 my-auto items-center justify-center flex w-12 h-12 overflow-hidden rounded-full bg-gray-50 border-4 border-slightGray dark:border-slightDark">
@@ -47,7 +47,7 @@ export default {
       InputWithValidationLiquidity
    },
   computed: {
-    ...mapGetters("addressConstants", ["oSWAPCHEF", "UNIROUTERV2", "hMULTICALL", "hRPC"]),
+    ...mapGetters("addressConstants", ["DONECHEF", "UNIROUTERV2", "hMULTICALL", "hRPC"]),
   },
   methods: {
     ...mapGetters("wallet", ["getChainID"]),
@@ -85,7 +85,7 @@ export default {
     async getLpStaked(poolAddress) {
         const MULTICALL = this.hMULTICALL(this.getChainID());
         const RPC = this.hRPC(this.getChainID());
-         const MASTERCHEF = this.oSWAPCHEF(this.getChainID());
+         const MASTERCHEF = this.DONECHEF(this.getChainID());
         const CALL =  [{
           target: poolAddress,
           call: ["totalSupply()(uint256)"],

@@ -1,10 +1,10 @@
 export const pools = {
-  oSWAPWONE: {
+  DONEWONE: {
     pair: "DONE/ONE",
     pairaddress: "0xF237c4Ffc7F761eD07D665567DcCF6522B96C1E7",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     token1address: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     imgtoken1: "https://openfi.dev/tokens/default/ONE.png",
     name: ["DONE", "ONE"],
     decimals: [18, 18],
@@ -12,13 +12,13 @@ export const pools = {
     rewards: "3X",
     i: 0
   },
-  oSWAPbBUSD: {
+  DONEbBUSD: {
     pair: "DONE/bBUSD",
     pairaddress: "0x6f850edCE1E3Ea86e6c24317709430cdE3C2e0C4",
     token1address: "0x0aB43550A6915F9f67d0c454C2E90385E6497EaA",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     imgtoken1: "https://openfi.dev/tokens/default/BUSD.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: ["DONE","bBUSD"],
     decimals: [18, 18],
     pid: "1",
@@ -140,26 +140,26 @@ export const pools = {
     rewards: "1X",
     i: 9
   },//**************************************************************************
-  oSWAPbMATIC: {
+  DONEbMATIC: {
     pair: "DONE/bMATIC",
     pairaddress: "0x2aa71117D13947311794fC9B63Dfa2c4A092d902",
     token1address: "0x6E7bE5B9B4C9953434CD83950D61408f1cCc3bee",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     imgtoken1: "https://openfi.dev/tokens/default/MATIC.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: [ "DONE" , "bMATIC"],
     decimals: [18, 18],
     pid: "10",
     rewards: "3X",
     i: 10
   },
-    oSWAPbBNB: {
+    DONEbBNB: {
     pair: "DONE/bBNB",
     pairaddress: "0xbdbCbf17cbB86fb4C76B0a68eef0aa476E812Ad6",
     token1address: "0xb1f6E61E1e113625593a22fa6aa94F8052bc39E0",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     imgtoken1: "https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: ["DONE","bBNB"],
     decimals: [18, 18],
     pid: "11",
@@ -167,13 +167,13 @@ export const pools = {
     i: 11
   },
 
-    oSWAPbADA: {
+    DONEbADA: {
     pair: "DONE/bADA",
     pairaddress: "0xefD9A4581ae64B60ce1b5D240b7A74314042d561",
     token1address: "0x582617bD8Ca80d22D4432E63Fda52D74dcDCEe4c",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     imgtoken1: "https://s2.coinmarketcap.com/static/img/coins/128x128/2010.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: ["bADA","DONE"],
     decimals: [18, 18],
     pid: "12",
@@ -233,12 +233,12 @@ export const pools = {
     i: 16
   },
   
-  oSWAPWONEs: {
+  DONEWONEs: {
     pair: "DONE/WONE VENOM-LP",
     pairaddress: "0xef5e22f3866807ef8345b36cfc05e221240460b3",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     token1address: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     imgtoken1: "https://openfi.dev/tokens/default/ONE.png",
     name: ["DONE", "ONE"],
     decimals: [18, 18],
@@ -307,13 +307,13 @@ export const pools = {
 
 };
 export const SoloPools = {
-  oSWAPWONE: {
+  DONEWONE: {
     pair: "DONE",
     pairaddress: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     token1address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
     token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
-    imgtoken1: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
+    imgtoken1: "https://openfi.dev/tokens/default/DONE.png",
     name: ["DONE"],
     decimals: [18, 18],
     pid: "17",

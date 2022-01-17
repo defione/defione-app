@@ -1,8 +1,8 @@
 <template>
-  <div id="farm" class="max-w-screen-xl mx-auto flex flex-1 flex-col oswap-layout xl:px-0 px-3 text-gray-500 pb-16">
+  <div id="farm" class="max-w-screen-xl mx-auto flex flex-1 flex-col done-layout xl:px-0 px-3 text-gray-500 pb-16">
     <div v-if="!validatorData" class="flex flex-1 items-center justify-center w-full h-full">
       <transition name="fade-in" appear>
-        <svg class="animate-spin h-7 w-7 text-oswapGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <svg class="animate-spin h-7 w-7 text-doneGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
@@ -17,7 +17,7 @@
               <div class="flex flex-col">
         
                 <div class="flex space-x-2 items-center mb-6">
-                  <i class="las la-sitemap text-2xl dark:text-oswapGreen"></i>
+                  <i class="las la-sitemap text-2xl dark:text-doneGreen"></i>
                   <p class="text-sm uppercase">{{validator.name}}</p>
 
                 </div>
@@ -45,13 +45,13 @@
           <Divider :title="validator.delegators.length + ' Delegators'" class="w-full text-sm py-3" />
 
           <div class="grid grid-cols-8 gap-3">
-            <div v-for="(delegator, index) in validator.delegators" :key="index" class="flex flex-col rounded-xl space-y-1 st5 rounded-2xl bg-gradient-to-l dark:from-slightDark from-slightGray to-transparent dark:hover:bg-slightDark hover:bg-slightGray border-l border-oswapGreen py-3 px-4 shadow">
+            <div v-for="(delegator, index) in validator.delegators" :key="index" class="flex flex-col rounded-xl space-y-1 st5 rounded-2xl bg-gradient-to-l dark:from-slightDark from-slightGray to-transparent dark:hover:bg-slightDark hover:bg-slightGray border-l border-doneGreen py-3 px-4 shadow">
               <div class="flex flex-col space-y-1">
-                <p class="text-xs text-oswapBlue-light">Address:</p>
+                <p class="text-xs text-doneBlue-light">Address:</p>
                 <p class="text-xs text-el">{{delegator['delegator-address']}}</p>
-                <p class="text-xs text-oswapBlue-light">Amount:</p>
+                <p class="text-xs text-doneBlue-light">Amount:</p>
                 <p class="text-xs text-el">{{prettify((delegator.amount/10**18).toFixed(2))}}</p>
-                <p class="text-xs text-oswapBlue-light">Weight:</p>
+                <p class="text-xs text-doneBlue-light">Weight:</p>
                 <p class="text-xl text-el font-bold">{{toPercent(loadedData, delegator.amount).toFixed(4)}}%</p>
               </div>
             </div>
@@ -129,7 +129,7 @@
               theme: false,
               custom: ({ series, seriesIndex, dataPointIndex, w }) => {
                 return (
-                  '<div class="flex p-3 rounded-md bg-gray-100 dark:bg-slightDark text-xs text-gray-500 dark:text-gray-200 border-l border-oswapGreen">' +
+                  '<div class="flex p-3 rounded-md bg-gray-100 dark:bg-slightDark text-xs text-gray-500 dark:text-gray-200 border-l border-doneGreen">' +
                   "<span>" + "Epoch " + w.globals.categoryLabels[dataPointIndex] + ": " + (series[seriesIndex][dataPointIndex] * 100 + "%") + "</span>" +
                   "</div>"
                 );

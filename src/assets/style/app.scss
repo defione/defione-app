@@ -28,7 +28,7 @@ $la-font-path: "~line-awesome/dist/line-awesome/fonts" !default;
   transform: translate(0, -50%);
 }
 
-.oswap-layout {
+.done-layout {
   /* viewport height - header - footer */
   min-height: calc(100vh - 72px - 96px);
 }
@@ -77,8 +77,8 @@ html {
 
 .grab-attention {
   @apply flex w-28 h-full justify-between items-center border;
-  @apply border-oswapGreen-dark dark:border-oswapGreen dark:hover:bg-oswapGreen;
-  @apply hover:bg-oswapGreen space-x-1 p-2 pl-3 rounded-full;
+  @apply border-doneGreen-dark dark:border-doneGreen dark:hover:bg-doneGreen;
+  @apply hover:bg-doneGreen space-x-1 p-2 pl-3 rounded-full;
   @apply dark:bg-slightDark bg-slightGray relative;
   z-index: 2;
 }

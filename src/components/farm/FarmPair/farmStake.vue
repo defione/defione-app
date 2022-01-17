@@ -14,9 +14,9 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-pointer">
         <div class="flex items-center justify-center">
-          <p class="text-sm ml-5 text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray">Stake</p>
+          <p class="text-sm ml-5 text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray">Stake</p>
         </div>
-        <i class="las la-upload text-xl pr-5 text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+        <i class="las la-upload text-xl pr-5 text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition>
@@ -27,20 +27,20 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-wait">
         <div class="flex flex-1 items-center justify-center">
-          <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray">Staking</p>
+          <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray">Staking</p>
         </div>
-        <i class="las la-sync text-xl animate-spin text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+        <i class="las la-sync text-xl animate-spin text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition>
 
   <!-- Staked -->
   <transition tag="div" name="approve-btn" class="inline-block absolute">
-    <div v-if="buttonState == 'finished'" class="flex w-28 justify-between items-center border border-oswapGreen glow-oswapGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
+    <div v-if="buttonState == 'finished'" class="flex w-28 justify-between items-center border border-doneGreen glow-doneGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
       <div class="flex flex-1 items-center justify-center">
-        <p class="text-sm text-oswapGreen">Staked</p>
+        <p class="text-sm text-doneGreen">Staked</p>
       </div>
-      <i class="las la-check-circle text-xl text-oswapGreen"></i>
+      <i class="las la-check-circle text-xl text-doneGreen"></i>
     </div> 
   </transition>
 </template>

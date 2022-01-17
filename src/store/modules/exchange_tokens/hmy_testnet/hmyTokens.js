@@ -7,12 +7,12 @@ export const hmytokens = {
     imgSrc: "https://openfi.dev/tokens/default/ONE.png",
     decimals: 18
   },
-  oSWAP: {
+  DONE: {
     Symbol: "DONE",
     name: "Defione",
     oneAddress: "one1cpp3mhxq6gfm7flvaj5vyd3vp5pq33kuch2zg8",
     oneZeroxAddress: "0x9580254b12A7289e4b86c30F6a254Be81fD5B8Df", //0x93e07A8226b646d1C93314AB9f3b87fAfC753906
     decimals: 18,
-    imgSrc: "https://openfi.dev/tokens/default/oSWAP.png"
+    imgSrc: "https://openfi.dev/tokens/default/DONE.png"
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div v-if="this.getFromNetwork && this.getToNetwork" @click="this.updateBalances()"
-    class="flex items-center justify-center h-10 w-10 text-oswapGreen cursor-pointer hover:bg-slightGray dark:hover:bg-slightDark rounded-xl">
+    class="flex items-center justify-center h-10 w-10 text-doneGreen cursor-pointer hover:bg-slightGray dark:hover:bg-slightDark rounded-xl">
     <i class="las la-exchange-alt text-2xl"></i>
   </div>
 

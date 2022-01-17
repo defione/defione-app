@@ -13,9 +13,9 @@
       
       <!-- Pair Title -->
       <div class="absolute left-10 pl-5 items-center justify-center flex h-12 space-x-2">
-        <p class="text-xs text-oswapBlue-light pl-5">{{pool.pair}}</p>
+        <p class="text-xs text-doneBlue-light pl-5">{{pool.pair}}</p>
         <tooltip-me>
-          <i class="las la-exclamation-circle text-xl transform rotate-180 hover:text-oswapGreen"></i>
+          <i class="las la-exclamation-circle text-xl transform rotate-180 hover:text-doneGreen"></i>
           <tooltip-me-content :options="tooltip"
             class="flex ss:w-64 xs:w-80 rounded-lg shadow-xl p-0.5"
           >
@@ -88,7 +88,7 @@
       // Desktop
       // When the user clicks top open the farm pair details
       // we must recalc tooltips again
-      this.oswapEmit.on('recalc-tooltips', () => {
+      this.doneEmit.on('recalc-tooltips', () => {
         if (this.getWindowSize().width >= 768) {
           this.adjustTooltip();
         }

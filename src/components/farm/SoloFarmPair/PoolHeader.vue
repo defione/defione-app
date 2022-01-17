@@ -9,9 +9,9 @@
       
       <!-- Pair Title -->
       <div class="absolute left-10 pl-5 items-center justify-center flex h-12 space-x-2">
-        <p class="text-xs text-oswapBlue-light">{{pool.name[0]}}</p>
+        <p class="text-xs text-doneBlue-light">{{pool.name[0]}}</p>
         <tooltip-me>
-          <i class="las la-exclamation-circle text-xl transform rotate-180 hover:text-oswapGreen"></i>
+          <i class="las la-exclamation-circle text-xl transform rotate-180 hover:text-doneGreen"></i>
           <tooltip-me-content :options="tooltip"
             class="flex ss:w-64 xs:w-80 rounded-lg shadow-xl p-0.5"
           >
@@ -34,14 +34,14 @@
     <!-- Header right side -->
     <div class="flex h-10 w-20 items-center justify-end pr-2">
       <div v-if="!this.rewards" class="flex flex-1 items-center justify-end">
-        <svg class="animate-spin h-7 w-7 text-oswapGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <svg class="animate-spin h-7 w-7 text-doneGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
       </div>
       <div v-else>
-        <p class="ss:text-xs xs:text-sm xl:text-xs lg:text-xs lgg:text-xs font-bold text-oswapGreen-dark group-hover:text-oswapGreen italic">APR: </p>
-        <p class="ss:text-xs xs:text-sm xl:text-sm lg:text-sm lgg:text-sm font-bold text-oswapGreen-dark group-hover:text-oswapGreen italic"> {{this.rewards}} %</p>
+        <p class="ss:text-xs xs:text-sm xl:text-xs lg:text-xs lgg:text-xs font-bold text-doneGreen-dark group-hover:text-doneGreen italic">APR: </p>
+        <p class="ss:text-xs xs:text-sm xl:text-sm lg:text-sm lgg:text-sm font-bold text-doneGreen-dark group-hover:text-doneGreen italic"> {{this.rewards}} %</p>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@
       // Desktop
       // When the user clicks top open the farm pair details
       // we must recalc tooltips again
-      this.oswapEmit.on('recalc-tooltips', () => {
+      this.doneEmit.on('recalc-tooltips', () => {
         if (this.getWindowSize().width >= 768) {
           this.adjustTooltip();
         }

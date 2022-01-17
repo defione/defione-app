@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col st5-all p-4 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent text-gray-500 dark:text-gray-300 ss:w-80 xs:w-96 rounded-3xl border-l border-oswapGreen">
+  <div class="flex flex-col st5-all p-4 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent text-gray-500 dark:text-gray-300 ss:w-80 xs:w-96 rounded-3xl border-l border-doneGreen">
     <div class="flex items-center space-x-2 mb-3">
       <i class="las la-pallet text-xl dark:text-gray-200"></i>
       <p class="text-sm dark:text-gray-200">Bridge</p>
@@ -10,14 +10,14 @@
       <BridgeTokenSelect @click="selectToken('token1')" v-on:change='this.checkChainId()' whichToken="token1" />
       <div class="flex flex-1 items-center space-x-3">
         <InputWithValidationBridge :input="amount" @updateAmounts="this.checkChainId()" :errors="errors" @catchInput="inputAmount" :rounded="'rounded-xl'" :placeholder="'Amount...'" :errorTop="'pt-10'">
-          <p class="flex items-center justify-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-oswapDark-gray rounded-xl px-3 h-10">{{tokenSymbol}}</p>
+          <p class="flex items-center justify-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-doneDark-gray rounded-xl px-3 h-10">{{tokenSymbol}}</p>
         </InputWithValidationBridge>
         
 
         <div class="flex flex-1 items-center justify-end group-scope">
-          <div @click="setMax()" class="flex h-10 items-center group-scope-hover:bg-oswapGreen text-oswapGreen-dark dark:text-oswapGreen border border-oswapGreen-dark dark:border-oswapGreen cursor-pointer px-3 rounded-xl space-x-2">
-            <i class="las la-wallet text-xl dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100"></i>
-            <p class="dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100">MAX</p>
+          <div @click="setMax()" class="flex h-10 items-center group-scope-hover:bg-doneGreen text-doneGreen-dark dark:text-doneGreen border border-doneGreen-dark dark:border-doneGreen cursor-pointer px-3 rounded-xl space-x-2">
+            <i class="las la-wallet text-xl dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100"></i>
+            <p class="dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100">MAX</p>
           </div>
         </div>
       </div>
@@ -29,9 +29,9 @@
         <!-- Active buttons if tokens selected -->
         <div v-if="(this.getToken()['token1'])" class="flex flex-1 items-center">
           <!-- Reset Tokens Button -->
-          <div @click="this.resetSelection()" class="flex items-center pr-4 rounded-full hover:bg-gray-100 dark:hover:bg-oswapDark-gray bg-opacity-100 hover:bg-opacity-30 cursor-pointer">
+          <div @click="this.resetSelection()" class="flex items-center pr-4 rounded-full hover:bg-gray-100 dark:hover:bg-doneDark-gray bg-opacity-100 hover:bg-opacity-30 cursor-pointer">
             <i class="las la-undo-alt text-lg p-2 text-red-400 rounded-full"></i>
-            <p class="text-sm text-gray-500 dark:text-oswapBlue-light">reset</p>
+            <p class="text-sm text-gray-500 dark:text-doneBlue-light">reset</p>
           </div>
         </div>
 

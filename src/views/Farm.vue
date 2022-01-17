@@ -1,5 +1,5 @@
 <template>
-  <div id="farm" class="max-w-screen-xl mx-auto flex flex-1 flex-col items-center justify-center oswap-layout xl:px-0 px-3 text-gray-500">
+  <div id="farm" class="max-w-screen-xl mx-auto flex flex-1 flex-col items-center justify-center done-layout xl:px-0 px-3 text-gray-500">
     <transition name="fall" appear>
       <FarmHeader v-if="soloData" :data="farmHeaderData" :rewardsPerTime="rewardsPerTimeObj" @updateData="getTotalPending" />
     </transition>
@@ -16,7 +16,7 @@
         <FarmPair v-for="(pool, index) in this.Pools" @updateTVL="updateTVL" @updateAPR="updateAPR" @rewardsPerTime="rewardsPerTime" :key="index" :poolData="farmData[pool.i]" :pool="pool" @updateData="updateData" />
       </div>
       <div v-else class="flex h-full items-center mt-16">
-        <svg class="animate-spin h-8 w-8 text-oswapGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <svg class="animate-spin h-8 w-8 text-doneGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
@@ -101,7 +101,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters("addressConstants", ["oSWAPMAKER", "oSWAPCHEF", "hMULTICALL", "hRPC"]),
+    ...mapGetters("addressConstants", ["DONEMAKER", "DONECHEF", "hMULTICALL", "hRPC"]),
   },
   methods: {
     ...mapGetters("wallet", ["getUserAddress", "getUserSignedIn", "getChainID"]),
@@ -218,7 +218,7 @@ export default {
       let temp = 0;
 
       let userAddress = this.getUserAddress();
-      const MASTERCHEF = this.oSWAPCHEF(this.getChainID());
+      const MASTERCHEF = this.DONECHEF(this.getChainID());
       var i = 0;
       var poolByIndex = [];
       var CALL = [];
@@ -266,7 +266,7 @@ export default {
       this.farmHeaderData.rewardsPending = temp;
     },
     initMulticall: async function (pools) {
-      //const OPENMAKER = this.oSWAPMAKER();
+      //const OPENMAKER = this.DONEMAKER();
       const MULTICALL = this.hMULTICALL(this.getChainID());
       const RPC = this.hRPC(this.getChainID());
       const [CALL, poolByIndex] = this.generateCalls(pools);
@@ -290,7 +290,7 @@ export default {
       return res;
     },
     initSoloMulticall: async function (pools) {
-      //const OPENMAKER = this.oSWAPMAKER();
+      //const OPENMAKER = this.DONEMAKER();
       const MULTICALL = this.hMULTICALL(this.getChainID());
       const RPC = this.hRPC(this.getChainID());
       const [CALL, poolByIndex] = this.generateSoloCalls(pools);
@@ -415,7 +415,7 @@ export default {
     generateCalls: function (pools) {
       let CALL = [];
       let userAddress = this.getUserAddress();
-      const MASTERCHEF = this.oSWAPCHEF(this.getChainID());
+      const MASTERCHEF = this.DONECHEF(this.getChainID());
       
       var i = 0;
       var poolByIndex = [];
@@ -468,7 +468,7 @@ export default {
     generateSoloCalls: function (pools) {
       let CALL = [];
       let userAddress = this.getUserAddress();
-      const MASTERCHEF = this.oSWAPCHEF(this.getChainID());
+      const MASTERCHEF = this.DONECHEF(this.getChainID());
       var i = 0;
       var poolByIndex = [];
 

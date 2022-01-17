@@ -12,7 +12,7 @@
       <p v-if="getDarkMode" class="absolute center-y-component right-3 dark:text-gray-400 font-extralight text-sm">Dark</p>
     </transition>
     <div
-      class="flex bg-gray-50 dark:bg-oswapGreen w-6 h-6 items-center justify-center rounded-full shadow-md transform duration-300"
+      class="flex bg-gray-50 dark:bg-doneGreen w-6 h-6 items-center justify-center rounded-full shadow-md transform duration-300"
       :class="{ 'translate-x-12' : !getDarkMode }"
     > 
       <transition name="fade-in-and-rotate" appear>

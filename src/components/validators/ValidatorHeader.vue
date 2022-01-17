@@ -5,7 +5,7 @@
         <ValidatorChart :validator="validator" />
       </div>
 
-      <div class="flex items-center pt-3 pr-3 mdd:divide-x mdd:divide-oswapGreen">
+      <div class="flex items-center pt-3 pr-3 mdd:divide-x mdd:divide-doneGreen">
         <div class="mdd:flex hidden"></div>
       </div>
       <div class="flex pt-3 pr-3 flex-2 items-start"></div>

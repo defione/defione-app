@@ -15,9 +15,9 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-pointer">
         <div class="flex flex-1 items-center justify-center">
-          <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray">Approve</p>
+          <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray">Approve</p>
         </div>
-        <i class="las la-pen-alt text-xl text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+        <i class="las la-pen-alt text-xl text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition> 
@@ -28,20 +28,20 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-wait">
         <div class="flex flex-1 items-center justify-center">
-          <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-white dark:group-scope-hover:text-oswapDark-gray">Approving</p>
+          <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-white dark:group-scope-hover:text-doneDark-gray">Approving</p>
         </div>
-        <i class="las la-sync text-xl animate-spin text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+        <i class="las la-sync text-xl animate-spin text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition>
 
   <!-- Approved -->
   <transition tag="div" name="approve-btn" class="inline-block absolute">
-    <div v-if="this.btnApprove == 'approved'" class="flex w-28 justify-between items-center border border-oswapGreen glow-oswapGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
+    <div v-if="this.btnApprove == 'approved'" class="flex w-28 justify-between items-center border border-doneGreen glow-doneGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
       <div class="flex flex-1 items-center justify-center">
-        <p class="text-sm text-oswapGreen ">Approved</p>
+        <p class="text-sm text-doneGreen ">Approved</p>
       </div>
-      <i class="las la-check-circle text-xl text-oswapGreen"></i>
+      <i class="las la-check-circle text-xl text-doneGreen"></i>
     </div> 
   </transition>
 </template>
@@ -71,7 +71,7 @@
       this.btnApprove = 'approving';
       this.$emit('tellStake', 'executing');
       
-      let masterchefAddr = this.oSWAPCHEF(this.getChainID());
+      let masterchefAddr = this.DONECHEF(this.getChainID());
       let parsedInput = this.getUnits(this.amount, lpToken);
       let allowance = await this.checkAllowance(lpToken, masterchefAddr);
       let isAllowanceSufficient = parsedInput.lt(allowance);
@@ -85,7 +85,7 @@
       }
     },
     computed: {
-      ...mapGetters('addressConstants', ['oSWAPCHEF', 'WONE']),
+      ...mapGetters('addressConstants', ['DONECHEF', 'WONE']),
     },
     methods: {
       ...mapGetters('exchange', ['getToken']),
@@ -94,7 +94,7 @@
 
       approve: async function(){
         var lpToken = {oneZeroxAddress: this.pool.pairaddress, Decimals: 18}
-        let masterchefAddr = this.oSWAPCHEF(this.getChainID());
+        let masterchefAddr = this.DONECHEF(this.getChainID());
         this.btnApprove = 'approving';
 
         let tx = await this.approveSpending(lpToken, masterchefAddr);

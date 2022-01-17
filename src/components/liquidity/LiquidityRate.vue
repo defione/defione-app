@@ -4,7 +4,7 @@
       <p class="dark:text-gray-300 text-el">Slippage Rate &nbsp;</p>
       <div class="flex items-center ss:space-x-1 xs:space-x-2">
         <div class="flex">
-          <div class="flex pr-1 items-center rounded-lg text-oswapGreen">
+          <div class="flex pr-1 items-center rounded-lg text-doneGreen">
             <p>{{selectedRate}}%</p>
           </div>
         </div>

@@ -7,19 +7,19 @@
       <WalletMode />
     </div>
     <div class="flex flex-col ss:items-end sm:items-center ss:pt-4 ns:pt-0 ss:space-y-1 xs:space-y-2">
-      <h1 class="ss:text-ns xs:text-sm dark:text-oswapGreen">{{ $route.name }} v2</h1>
+      <h1 class="ss:text-ns xs:text-sm dark:text-doneGreen">{{ $route.name }} v2</h1>
       <div class="flex ss:space-x-1 sm:space-x-3 ss:text-xs xs:text-xl">
         <a href="https://twitter.com/Defione_one">
-          <i class="lab la-twitter hover:text-oswapGreen-dark dark:text-oswapGreen dark:hover:text-oswapGreen-light"></i>
+          <i class="lab la-twitter hover:text-doneGreen-dark dark:text-doneGreen dark:hover:text-doneGreen-light"></i>
         </a>
         <a href="https://t.me/Defione_Harmony">
-          <i class="lab la-telegram hover:text-oswapGreen-dark dark:text-oswapGreen dark:hover:.text-oswapGreen-light"></i>
+          <i class="lab la-telegram hover:text-doneGreen-dark dark:text-doneGreen dark:hover:.text-doneGreen-light"></i>
         </a>
         <a href="https://www.reddit.com/r/Defione_Harmony/">
-          <i class="lab la-reddit hover:text-oswapGreen-dark dark:text-oswapGreen dark:hover:text-oswapGreen-light"></i>
+          <i class="lab la-reddit hover:text-doneGreen-dark dark:text-doneGreen dark:hover:text-doneGreen-light"></i>
         </a>
         <a href="https://discord.gg/hznnXUxert">
-          <i class="lab la-discord hover:text-oswapGreen-dark dark:text-oswapGreen dark:hover:text-oswapGreen-light"></i>
+          <i class="lab la-discord hover:text-doneGreen-dark dark:text-doneGreen dark:hover:text-doneGreen-light"></i>
         </a>
       </div>
     </div>

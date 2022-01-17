@@ -3,7 +3,7 @@
   "version": "2.2.22",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --host 0.0.0.0",
     "build": "vue-cli-service build",
     "serve:bs": "vue-cli-service serve:bs",
     "serve:dev": "vue-cli-service serve --port 4545"
@@ -27,6 +27,7 @@
     "bridge-sdk": "2.13.0",
     "core-js": "^3.6.5",
     "cryptocurrency-icons": "^0.18.0",
+    "defione-sdk": "git://github.com/defione/defione-sdk.git",
     "easy-circular-progress": "^1.0.4",
     "ethers": "^5.3.0",
     "harmony-ethers-defione-sdk": "git://github.com/defione/harmony-ethers-defione-sdk.git",
@@ -34,7 +35,6 @@
     "line-awesome": "^1.3.0",
     "mitt": "^3.0.0",
     "npm": "^7.16.0",
-    "defione-sdk": "git://github.com/defione/defione-sdk.git",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7",
     "tailwindcss-glow": "^2.0.0-alpha.1",

@@ -1,21 +1,21 @@
 <template>
-  <div class="flex flex-col st5-all p-4 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent text-gray-500 dark:text-gray-300 ss:w-80 xs:w-96 rounded-3xl border-l border-oswapGreen">
+  <div class="flex flex-col st5-all p-4 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent text-gray-500 dark:text-gray-300 ss:w-80 xs:w-96 rounded-3xl border-l border-doneGreen">
     <div class="flex items-center space-x-2 mb-3">
       <i class="las la-route text-xl dark:text-gray-200"></i>
       <p class="text-sm dark:text-gray-200">Migrate</p>
     </div>
     <div class="flex flex-col space-y-3">
-      <MigrateTokenSelect :token="this.oSWAP" />
+      <MigrateTokenSelect :token="this.DONE" />
       <div class="flex flex-1 items-center space-x-3">
 
         <InputWithValidationMigrate :input="amount" :errors="errors" @catchInput="inputAmount" :rounded="'rounded-xl'" :placeholder="'Amount...'" :errorTop="'pt-10'">
-          <p class="flex items-center justify-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-oswapDark-gray rounded-xl px-3 h-10">{{this.oSWAP.Symbol}}</p>
+          <p class="flex items-center justify-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-doneDark-gray rounded-xl px-3 h-10">{{this.DONE.Symbol}}</p>
         </InputWithValidationMigrate>
 
         <div class="flex flex-1 items-center justify-end group-scope">
-          <div @click="setMax()" class="flex h-10 items-center group-scope-hover:bg-oswapGreen text-oswapGreen-dark dark:text-oswapGreen border border-oswapGreen-dark dark:border-oswapGreen cursor-pointer px-3 rounded-xl space-x-2">
-            <i class="las la-wallet text-xl dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100"></i>
-            <p class="dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100">MAX</p>
+          <div @click="setMax()" class="flex h-10 items-center group-scope-hover:bg-doneGreen text-doneGreen-dark dark:text-doneGreen border border-doneGreen-dark dark:border-doneGreen cursor-pointer px-3 rounded-xl space-x-2">
+            <i class="las la-wallet text-xl dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100"></i>
+            <p class="dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100">MAX</p>
           </div>
         </div>
       </div>
@@ -63,13 +63,13 @@
       return {
         //0x93e07A8226b646d1C93314AB9f3b87fAfC753906
         whichToken: 'token1',
-        oSWAP: {
-          Symbol: "oSWAP",
+        DONE: {
+          Symbol: "DONE",
           name: "Defione",
           //oneAddress: "one1cpp3mhxq6gfm7flvaj5vyd3vp5pq33kuch2zg8",
           oneZeroxAddress: "0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC",
           decimals: 18,
-          imgSrc: "https://openfi.dev/tokens/default/oSWAP.png"
+          imgSrc: "https://openfi.dev/tokens/default/DONE.png"
         },
 
         amount: '0.0',
@@ -81,11 +81,11 @@
       }
     },
     beforeMount() {
-      this.setToken({ tokenRef: this.whichToken, token: this.oSWAP });
+      this.setToken({ tokenRef: this.whichToken, token: this.DONE });
     },
     mounted: async function() {
       await setTimeout(function(){return}, 2000);
-      this.balance = await this.getTokenBalance(this.oSWAP)
+      this.balance = await this.getTokenBalance(this.DONE)
 
       this.setBalanceToken({ 0: this.balance })
 
@@ -105,15 +105,15 @@
         this.amount = this.balance
       },
       approve:async function() {
-        await this.approveV1(this.oSWAP);
+        await this.approveV1(this.DONE);
         this.ApproveButtonState = 'finished'
         this.MigrateButtonState = 'active'
       },
       migrateTokens:async function() {
         await this.migrateV2(this.amount);
         this.MigrateButtonState = "finished"
-        this.balance = await this.getTokenBalance(this.oSWAP);
-        let theme = localStorage.getItem("oSwap\_theme");
+        this.balance = await this.getTokenBalance(this.DONE);
+        let theme = localStorage.getItem("Done\_theme");
 
         localStorage.setItem("firstmigration", false);
         this.setBalanceToken({ 0: this.balance })

@@ -4,10 +4,10 @@
     <div class="flex flex-col space-y-1 w-1/3 min-w-0">
       <!-- Token img and name -->
       <div class="relative flex space-x-2 items-center h-10">
-        <i @click="addTokenToMetamask(this.getToken()['token2'])" class="flex las la-plus text-sm p-1 text-oswapGreen absolute top-0 left-0 items-center justify-center bg-slightGray dark:bg-slightDark rounded-full cursor-pointer shadow hover:bg-oswapGreen dark:hover:bg-oswapGreen hover:text-slightGray dark:hover:text-slightDark"></i>
+        <i @click="addTokenToMetamask(this.getToken()['token2'])" class="flex las la-plus text-sm p-1 text-doneGreen absolute top-0 left-0 items-center justify-center bg-slightGray dark:bg-slightDark rounded-full cursor-pointer shadow hover:bg-doneGreen dark:hover:bg-doneGreen hover:text-slightGray dark:hover:text-slightDark"></i>
         <img :src="this.getToken()['token2'].imgSrc" class="h-8 w-8 rounded-full flex items-center justify-center" alt="">
         <div class="flex flex-1 items-center min-w-0">
-          <p class="text-sm text-el text-oswapGreen-dark">{{this.getToken()['token2'].Symbol}}</p>
+          <p class="text-sm text-el text-doneGreen-dark">{{this.getToken()['token2'].Symbol}}</p>
         </div>
       </div>
       <!-- Network name -->
@@ -20,14 +20,14 @@
       <div class="flex h-10">
         <Input1 :errors="errors" :rounded="'rounded-xl'" :placeholder="'Amount...'" :errorTop="'pt-10'">
           <div class="flex flex-1 st5-all items-center justify-end group-scope z-30 absolute right-0">
-            <div @click="setMax()" class="flex h-10 items-center bg-gray-100 dark:bg-oswapDark-gray group-scope-hover:bg-oswapGreen text-oswapGreen-dark dark:text-oswapGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
-              <p class="text-sm dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100">MAX</p>
+            <div @click="setMax()" class="flex h-10 items-center bg-gray-100 dark:bg-doneDark-gray group-scope-hover:bg-doneGreen text-doneGreen-dark dark:text-doneGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
+              <p class="text-sm dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100">MAX</p>
             </div>
           </div>
         </Input1>
       </div>
       <div class="flex pl-2 space-x-2 h-4">
-        <p class="text-xs flex-none dark:text-oswapGreen-dark">Balance :</p>
+        <p class="text-xs flex-none dark:text-doneGreen-dark">Balance :</p>
         <p class="text-xs text-el text-gray-600 dark:text-gray-300">{{parseFloat(getBalanceToken(1)).toFixed(8)}}</p>
       </div>
     </div>

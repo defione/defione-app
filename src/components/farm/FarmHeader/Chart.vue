@@ -104,7 +104,7 @@
             theme: false,
             custom: ({ series, seriesIndex, dataPointIndex, w }) => {
               return (
-                '<div class="flex p-3 rounded-full bg-gray-100 dark:bg-slightDark text-xs text-gray-500 dark:text-gray-200 border-2 border-oswapGreen">' +
+                '<div class="flex p-3 rounded-full bg-gray-100 dark:bg-slightDark text-xs text-gray-500 dark:text-gray-200 border-2 border-doneGreen">' +
                 "<span>" + w.globals.labels[seriesIndex] + ": " + "$ " + this.prettify(parseFloat(series[seriesIndex]).toFixed(2)) + "</span>" +
                 "</div>"
               );

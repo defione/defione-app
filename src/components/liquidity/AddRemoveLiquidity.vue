@@ -1,20 +1,20 @@
 <template>
   <div class="flex flex-1 flex-col ss:w-80 xs:w-96 pb-5 pt-2.5">
-    <div class="flex flex-1 flex-col p-4 st5 text-gray-500 dark:text-gray-300 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent border-l border-oswapGreen rounded-3xl h-auto">
+    <div class="flex flex-1 flex-col p-4 st5 text-gray-500 dark:text-gray-300 bg-gradient-to-l from-slightGray dark:from-slightDark to-transparent border-l border-doneGreen rounded-3xl h-auto">
       <div class="flex items-center space-x-2 mb-3">
         <i class="las la-tint text-xl"></i>
         <p class="text-sm">Liquidity</p>
       </div>
-      <div class="flex flex-col st5 dark:bg-oswapDark-gray bg-gray-100 rounded-2xl">
-        <div class="flex shadow-lg flex-col st5 dark:bg-oswapDark-gray rounded-2xl">
-          <div class="flex shadow-lg flex-col st5 dark:bg-oswapDark-gray rounded-2xl">
-            <div class="flex shadow-lg flex-col space-y-3 st5 dark:bg-oswapDark-gray p-3 rounded-2xl">
+      <div class="flex flex-col st5 dark:bg-doneDark-gray bg-gray-100 rounded-2xl">
+        <div class="flex shadow-lg flex-col st5 dark:bg-doneDark-gray rounded-2xl">
+          <div class="flex shadow-lg flex-col st5 dark:bg-doneDark-gray rounded-2xl">
+            <div class="flex shadow-lg flex-col space-y-3 st5 dark:bg-doneDark-gray p-3 rounded-2xl">
               <LiquidityPair :available="balances.lpToken"/>
             </div>
             <LiquidityInfo :pairAddress="pairAddress"/>
           </div>
           <button @click="toggleAdd" class="flex px-3 py-4 space-x-3 items-center focus:outline-none">
-            <i class="las la-plus-circle text-lg text-oswapGreen"></i>
+            <i class="las la-plus-circle text-lg text-doneGreen"></i>
             <p class="text-sm">Add Liquidity</p>
           </button>
           <transition tag="div" name="squeeze-liq" class="flex overflow-hidden">

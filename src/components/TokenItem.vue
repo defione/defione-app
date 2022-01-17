@@ -4,7 +4,7 @@
     <div class="flex">
       <!-- dot -->
       <div class="flex items-center justify-center h-12 mr-3">
-        <div :class="token.Symbol[0] == 'e' ? 'bg-indigo-600' : (token.Symbol[0] == 'b' ? 'bg-yellow-500' : 'bg-oswapGreen')  " class="flex h-4 w-4 rounded-full"></div>
+        <div :class="token.Symbol[0] == 'e' ? 'bg-indigo-600' : (token.Symbol[0] == 'b' ? 'bg-yellow-500' : 'bg-doneGreen')  " class="flex h-4 w-4 rounded-full"></div>
       </div>
       <!-- asset symbol -->
       <div class="flex items-center justify-center">
@@ -26,7 +26,7 @@
         <p class="text-sm font-bold">$ {{token.totalWorth}}</p>
       </div>
       <!-- buy more -->
-      <button class="flex items-center justify-center ml-3 rounded-full border border-oswapGreen st5 text-oswapGreen hover:bg-oswapGreen hover:text-gray-200 dark:hover:text-slightDark">
+      <button class="flex items-center justify-center ml-3 rounded-full border border-doneGreen st5 text-doneGreen hover:bg-doneGreen hover:text-gray-200 dark:hover:text-slightDark">
         <p class="text-sm p-1 px-3">buy more</p>
       </button>
     </div>

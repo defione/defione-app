@@ -2,12 +2,12 @@
   <div class="flex flex-col flex-1 space-y-3">
     <div class="flex flex-1 space-x-3">
       <InputWithValidationLiquidity :input="amount" :errors="errors" @catchInput="inputAmount" :rounded="'rounded-xl'" :placeholder="'Amount...'" :errorTop="'pt-10'">
-        <div class="flex items-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-oswapDark-gray rounded-xl h-10">
+        <div class="flex items-center text-xs z-30 right-0 absolute bg-gray-100 dark:bg-doneDark-gray rounded-xl h-10">
           <p class="px-3">{{token0.Symbol}}/{{token1.Symbol}}</p>
 
           <div v-if="pair" class="flex flex-1 st5-all items-center justify-end group-scope">
-            <div @click="setMax()" class="flex h-10 items-center bg-gray-100 dark:bg-oswapDark-gray group-scope-hover:bg-oswapGreen text-oswapGreen-dark dark:text-oswapGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
-              <p class="text-sm dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100">MAX</p>
+            <div @click="setMax()" class="flex h-10 items-center bg-gray-100 dark:bg-doneDark-gray group-scope-hover:bg-doneGreen text-doneGreen-dark dark:text-doneGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
+              <p class="text-sm dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100">MAX</p>
             </div>
           </div>
         </div>

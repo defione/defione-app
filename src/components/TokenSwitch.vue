@@ -1,7 +1,7 @@
 <template>
   <div v-if="token('token1', 'token2')" @click="this.switchTokens()" class="flex items-center justify-center relative z-20 group cursor-pointer">
-    <div class="flex absolute items-center justify-center w-7 h-7 rounded-lg glow-oswapBlue-light-lg bg-slightGray dark:bg-slightDark border border-oswapGreen group-hover:bg-oswapGreen st5">
-      <i class="las la-exchange-alt text-lg text-oswapGreen group-hover:text-gray-50 st5"></i>
+    <div class="flex absolute items-center justify-center w-7 h-7 rounded-lg glow-doneBlue-light-lg bg-slightGray dark:bg-slightDark border border-doneGreen group-hover:bg-doneGreen st5">
+      <i class="las la-exchange-alt text-lg text-doneGreen group-hover:text-gray-50 st5"></i>
     </div>
   </div>
 

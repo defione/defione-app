@@ -2,8 +2,8 @@
   <div class="flex flex-wrap w-full">
   
     <div class="flex space-x-3 items-center mb-6">
-      <i class="las la-user text-lg dark:text-oswapGreen"></i>
-      <p class="text-oswapGreen-dark dark:text-oswapBlue-light text-sm uppercase">Income:</p>
+      <i class="las la-user text-lg dark:text-doneGreen"></i>
+      <p class="text-doneGreen-dark dark:text-doneBlue-light text-sm uppercase">Income:</p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3 w-full">
@@ -55,7 +55,7 @@
     },
     data() {
       return {
-        oswapPrice: 0,
+        donePrice: 0,
         usdValue: 0.00,
         weekly: 0,
         monthly: 0
@@ -75,7 +75,7 @@
       }.bind(this), timeout);
 
       await setInterval(async function(){
-       // this.oswapPrice = await this.getOswapPrice();
+       // this.donePrice = await this.getDonePrice();
 
       }.bind(this), 10000)
 
@@ -84,7 +84,7 @@
     },
     computed: {
       pendingValue: function() {
-        return this.prettify(String(parseFloat(this.REWARDS * this.oswapPrice).toFixed(2)))
+        return this.prettify(String(parseFloat(this.REWARDS * this.donePrice).toFixed(2)))
       },
       getMonthly: function(){
         let n;

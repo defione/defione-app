@@ -28,7 +28,7 @@ import 'animate.css';
 
 const app = createApp(App)
 const emitter = mitt();
-app.config.globalProperties.oswapEmit = emitter;
+app.config.globalProperties.doneEmit = emitter;
 
 app.use(router);
 app.use(store);
@@ -37,4 +37,4 @@ app.use(Toast, options);
 app.use(TooltipMe);
 app.use(VueApexCharts);
 
-app.mount('#oswapApp')
+app.mount('#doneApp')

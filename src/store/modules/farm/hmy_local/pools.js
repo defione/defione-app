@@ -1,10 +1,10 @@
 export const pools = {
-  oSWAPWONE: {
+  DONEWONE: {
     pair: "DEFIONE/ONE",
     pairaddress: "0xD1bC0791a37c90a93A48f17B06087F8C97d6c2A5",//0x40124A95B9BCC73D023b5a431e09F66407f66a4a And 0xA30858833c1Da05A3c80F92f1dE234895B1cF29A
     token0address: "0x40124A95B9BCC73D023b5a431e09F66407f66a4a",
     token1address: "0xA30858833c1Da05A3c80F92f1dE234895B1cF29A",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     imgtoken1: "https://openfi.dev/tokens/default/ONE.png",
     name: ["DEFIONE", "ONE"],
     decimals: [18, 18],
@@ -12,13 +12,13 @@ export const pools = {
     rewards: "3X",
     i: 0
   },
-  oSWAPbBUSD: {
+  DONEbBUSD: {
     pair: "bBUSD/DEFIONE",
     pairaddress: "0x0d3aa4F73C7cA416512C252bcD30A0822075bBA8", //0xa792af75af5fb3Ddc713BEEcB8868dAaA9fa2387 And 0x40124A95B9BCC73D023b5a431e09F66407f66a4a
     token0address: "0xa792af75af5fb3Ddc713BEEcB8868dAaA9fa2387",
     token1address: "0x40124A95B9BCC73D023b5a431e09F66407f66a4a",
     imgtoken0: "https://openfi.dev/tokens/default/BUSD.png",
-    imgtoken1: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken1: "https://openfi.dev/tokens/default/DONE.png",
     name: ["bBUSD","DEFIONE"],
     decimals: [18, 18],
     pid: "1",
@@ -142,26 +142,26 @@ export const pools = {
     rewards: "1X",
     i: 9
   },//**************************************************************************
-  oSWAPbMATIC: {
+  DONEbMATIC: {
     pair: "bMATIC/DEFIONE",
     pairaddress: "0x5DC8bFF97a80d91D7F38d8e366ea09a3763341Eb",
     token1address: "0xf8B4F5231F1a604A41533720c1677F37b8665b04",
     token0address: "0x40124A95B9BCC73D023b5a431e09F66407f66a4a",
     imgtoken1: "https://openfi.dev/tokens/default/MATIC.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: [ "bMATIC", "DEFIONE"],
     decimals: [18, 18],
     pid: "10",
     rewards: "3X",
     i: 10
   },
-    oSWAPbBNB: {
+    DONEbBNB: {
     pair: "bBNB/DEFIONE",
     pairaddress: "0x4b76Faf2BB56048a456d19cc932110E404872550",
     token1address: "0xEfe21ae5aafdcCc7AF035412CCC62973d15c1AC7",
     token0address: "0x40124A95B9BCC73D023b5a431e09F66407f66a4a",
     imgtoken1: "https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: ["bBNB","DEFIONE"],
     decimals: [18, 18],
     pid: "11",
@@ -169,13 +169,13 @@ export const pools = {
     i: 11
   },
 
-    oSWAPbADA: {
+    DONEbADA: {
     pair: "bADA/DEFIONE",
     pairaddress: "0x5de4291fe5AEfF0f8ed6fe9A430ac3CdA3fFdA43",
     token1address: "0x807e68ce2a6564156Dc1f4f3cbf29572298d9Faa",
     token0address: "0x40124A95B9BCC73D023b5a431e09F66407f66a4a",
     imgtoken1: "https://s2.coinmarketcap.com/static/img/coins/128x128/2010.png",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     name: ["bADA","DEFIONE"],
     decimals: [18, 18],
     pid: "12",
@@ -195,12 +195,12 @@ export const pools = {
     rewards: "1X",
     i: 13
   },
-  oSWAPWONEs: {
+  DONEWONEs: {
     pair: "DEFIONE/WONE VENOM-LP",
     pairaddress: "0x4719eDF7Cd1e66B2c49ee6B0F8b704F083e701E5",
     token0address: "0xbff039Da81301348A1a9d218a45EC2b533298C99",
     token1address: "0xa792af75af5fb3Ddc713BEEcB8868dAaA9fa2387",
-    imgtoken0: "https://openfi.dev/tokens/default/oSWAP.png",
+    imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     imgtoken1: "https://openfi.dev/tokens/default/ONE.png",
     name: ["DEFIONE", "ONE"],
     decimals: [18, 18],

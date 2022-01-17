@@ -3,13 +3,13 @@
     <p class="dark:text-gray-300 text-el">Slippage Rate &nbsp;</p>
     <div class="flex items-center ss:space-x-1 xs:space-x-2">
       <div class="flex">
-        <div class="flex pr-1 items-center rounded-lg text-oswapGreen">
+        <div class="flex pr-1 items-center rounded-lg text-doneGreen">
           <p>{{getSlippageRate}}%</p>
         </div>
       </div>
-      <SelectRate rate="0.4" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-oswapDark-gray bg-gray-100'" />
-      <SelectRate rate="0.8" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-oswapDark-gray bg-gray-100'" />
-      <SelectRate rate="1.2" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-oswapDark-gray bg-gray-100'" />
+      <SelectRate rate="0.4" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-doneDark-gray bg-gray-100'" />
+      <SelectRate rate="0.8" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-doneDark-gray bg-gray-100'" />
+      <SelectRate rate="1.2" :picked="getSlippageRate" @selectRate="updateSelectedRate" hover="hover:bg-gray-50" darkHover="dark:hover:bg-slightDark" :class="'dark:text-gray-300 dark:bg-doneDark-gray bg-gray-100'" />
       <SwapperRateCustom :picked="getSlippageRate" @selectRate="updateSelectedRate"/>
     </div>
   </div>

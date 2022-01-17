@@ -1,14 +1,14 @@
 <template>
   <div id="root" :class="getColorTheme" class="antialiased pt-18">
-    <div id="header" :class="getIsScrolled ? 'shadow-xl' : ''" class="flex flex-1 fixed inset-x-0 top-0 st5 bg-gradient-to-r dark:from-oswapDark-gray dark:to-slightDark from-gray-300 to-slightGray z-50">
+    <div id="header" :class="getIsScrolled ? 'shadow-xl' : ''" class="flex flex-1 fixed inset-x-0 top-0 st5 bg-gradient-to-r dark:from-doneDark-gray dark:to-slightDark from-gray-300 to-slightGray z-50">
       <Header />
     </div>
 
-    <div id="body" class="flex w-full oswap-layout z-20 st5 bg-gradient-to-r from-gray-300 to-slightGray dark:from-oswapDark-gray dark:to-slightDark">
+    <div id="body" class="flex w-full done-layout z-20 st5 bg-gradient-to-r from-gray-300 to-slightGray dark:from-doneDark-gray dark:to-slightDark">
       <router-view />
     </div>
 
-    <div id="footer" class="w-full h-full z-40 st5 bg-gradient-to-r from-gray-300 to-slightGray dark:from-oswapDark-gray dark:to-slightDark">
+    <div id="footer" class="w-full h-full z-40 st5 bg-gradient-to-r from-gray-300 to-slightGray dark:from-doneDark-gray dark:to-slightDark">
       <Footer />
     </div>
   </div>
@@ -34,12 +34,12 @@
     mounted: async function() {
       
       // Color Mode!
-      let theme = localStorage.getItem("oSwap\_theme");
+      let theme = localStorage.getItem("Done\_theme");
 
       if (theme) {
         this.setTheme(theme);
       } else {
-        localStorage.setItem("oSwap\_theme", 'dark');
+        localStorage.setItem("Done\_theme", 'dark');
       }
 
     },

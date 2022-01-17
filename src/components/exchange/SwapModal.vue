@@ -2,16 +2,16 @@
   <!-- Modal -->
   <div class="flex ss:h-ss xs:h-sm bg-slightGray dark:bg-slightDark center-component flex-col z-60 text-gray-500 dark:text-gray-300 ss:w-80 xs:w-96 rounded-3xl border border-black border-opacity-10">
     <!-- Header -->
-    <div class="fixed z-40 flex flex-col shadow-xl rounded-t-3xl rounded-b-2xl inset-x-0 p-2 bg-slightGray dark:bg-slightDark focus-within:text-oswapGreen dark:focus-within:text-oswapGreen border-b border-black border-opacity-10">
+    <div class="fixed z-40 flex flex-col shadow-xl rounded-t-3xl rounded-b-2xl inset-x-0 p-2 bg-slightGray dark:bg-slightDark focus-within:text-doneGreen dark:focus-within:text-doneGreen border-b border-black border-opacity-10">
       <div class="flex w-full h-10 pb-2 items-center justify-between">
         <p class="dark:text-gray-200 text-gray-500 pl-3">Select a Token</p>
         <div @click="goTo('swap')" class="flex h-10 items-center">
-          <i class="las la-times text-2xl p-2 dark:text-gray-500 dark:hover:text-oswapGreen hover:text-oswapGreen cursor-pointer text-gray-300"></i>
+          <i class="las la-times text-2xl p-2 dark:text-gray-500 dark:hover:text-doneGreen hover:text-doneGreen cursor-pointer text-gray-300"></i>
         </div>
       </div>
       <div class="flex w-full h-10 items-center">
         <i class="absolute las la-search text-2xl pl-2"></i>
-        <input type="text" v-model="search" @input="this.retrieveTokens(search, getChainID)" class="flex w-full ring-1 focus:outline-none focus:ring-1 ring-black focus:ring-oswapGreen ring-opacity-5 rounded-xl py-2 items-center pl-10 dark:bg-oswapDark-gray dark:placeholder-gray-600 placeholder-gray-200" placeholder="Search Token">
+        <input type="text" v-model="search" @input="this.retrieveTokens(search, getChainID)" class="flex w-full ring-1 focus:outline-none focus:ring-1 ring-black focus:ring-doneGreen ring-opacity-5 rounded-xl py-2 items-center pl-10 dark:bg-doneDark-gray dark:placeholder-gray-600 placeholder-gray-200" placeholder="Search Token">
       </div>
     </div>
     <!-- Token list body -->

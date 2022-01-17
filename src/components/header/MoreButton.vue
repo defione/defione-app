@@ -1,8 +1,8 @@
 <template>
   <Menu as="div" class="relative">
-    <MenuButton class="flex items-center space-x-2 p-2 px-1 md:px-3 rounded-lg group cursor-pointer dark:text-oswapGreen focus:outline-none focus:ring-1 focus:ring-black focus:ring-opacity-20">
-      <i class="las la-braille text-xl group-hover:text-oswapGreen"></i>
-      <p class="text-sm hidden md:block group-hover:text-oswapBlue-light">More</p>
+    <MenuButton class="flex items-center space-x-2 p-2 px-1 md:px-3 rounded-lg group cursor-pointer dark:text-doneGreen focus:outline-none focus:ring-1 focus:ring-black focus:ring-opacity-20">
+      <i class="las la-braille text-xl group-hover:text-doneGreen"></i>
+      <p class="text-sm hidden md:block group-hover:text-doneBlue-light">More</p>
     </MenuButton>
 
     <transition
@@ -18,35 +18,35 @@
           <div class="overflow-hidden rounded-lg ring-1 ring-black dark:ring-gray-600 ring-opacity-25">
             <div class="relative max-h-500 overflow-auto grid gap-8 bg-gray-100 dark:bg-slightDark p-4 md:grid-cols-1">
               <MenuItem>
-                <a href="https://analytics.defione.one/" target="_blank" class="flex items-center p-2 -m-3 transition group duration-150 ease-in-out rounded-lg rounded-b-lg hover:bg-gray-50 dark:hover:bg-oswapDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                <a href="https://analytics.defione.finance/" target="_blank" class="flex items-center p-2 -m-3 transition group duration-150 ease-in-out rounded-lg rounded-b-lg hover:bg-gray-50 dark:hover:bg-doneDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
                   <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                    <div class="flex flex-1 dark:bg-oswapDark-gray h-full items-center bg-gray-100 justify-center rounded-lg">
-                      <i class="las la-chart-area text-3xl text-oswapGreen group-hover:text-oswapBlue-light"></i>
+                    <div class="flex flex-1 dark:bg-doneDark-gray h-full items-center bg-gray-100 justify-center rounded-lg">
+                      <i class="las la-chart-area text-3xl text-doneGreen group-hover:text-doneBlue-light"></i>
                     </div>
                   </div>
                   <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-900 dark:text-oswapGreen">Analytics</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-doneGreen">Analytics</p>
                     <p class="text-sm text-gray-500 dark:text-gray-300">Check token and pair stats</p>
                   </div>
                 </a>
               </MenuItem>
               <MenuItem v-for="route in routes" :key="route.url">
-                <router-link :to="route.url" class="flex items-center p-2 -m-3 transition group duration-150 ease-in-out rounded-lg rounded-b-lg hover:bg-gray-50 dark:hover:bg-oswapDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                <router-link :to="route.url" class="flex items-center p-2 -m-3 transition group duration-150 ease-in-out rounded-lg rounded-b-lg hover:bg-gray-50 dark:hover:bg-doneDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
                   <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                    <div class="flex flex-1 dark:bg-oswapDark-gray h-full items-center bg-gray-100 justify-center rounded-lg">
-                      <i :class="route.icon" class="las text-3xl text-oswapGreen group-hover:text-oswapBlue-light"></i>
+                    <div class="flex flex-1 dark:bg-doneDark-gray h-full items-center bg-gray-100 justify-center rounded-lg">
+                      <i :class="route.icon" class="las text-3xl text-doneGreen group-hover:text-doneBlue-light"></i>
                     </div>
                   </div>
                   <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-900 dark:text-oswapGreen">{{route.name}}</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-doneGreen">{{route.name}}</p>
                     <p class="text-sm text-gray-500 dark:text-gray-300">{{route.description}}</p>
                   </div>
                 </router-link>
               </MenuItem>
             </div>
             <div class="p-2 bg-gray-50 dark:bg-gray-600">
-              <a href="https://docs.defione.one/" target="_blank" class="flow-root p-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 dark:hover:bg-oswapDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
-                <span class="flex items-center"><span class="text-sm font-medium text-gray-900 dark:text-oswapGreen"> Documentation </span></span><span class="block text-sm text-gray-500 dark:text-gray-300">Read the official documentation for Defione</span>
+              <a href="https://docs.defione.finance/" target="_blank" class="flow-root p-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 dark:hover:bg-doneDark-gray focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
+                <span class="flex items-center"><span class="text-sm font-medium text-gray-900 dark:text-doneGreen"> Documentation </span></span><span class="block text-sm text-gray-500 dark:text-gray-300">Read the official documentation for Defione</span>
               </a>
             </div>
           </div>
@@ -73,7 +73,7 @@
           url: '/migrate',
           icon: 'la-route',
           name: 'Migrate',
-          description: 'Migrate your oSWAP Token to DONE'
+          description: 'Migrate your DONE Token to DONE'
         },
         {
           url: '/pairs',

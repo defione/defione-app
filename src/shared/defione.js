@@ -1,9 +1,9 @@
-import MasterChef from "defione-v2-core/build/contracts/MasterChef.json";
-import IUniswapV2Router02 from "defione-v2-core/build/contracts/IUniswapV2Router02.json";
-import SushiMaker from "defione-v2-core/build/contracts/SushiMaker.json";
-import IERC20 from "defione-v2-core/build/contracts/IERC20.json";
-import DefioneBridge from "defione-v2-core/build/contracts/DefioneBridge.json";
-import DefioneToken from "defione-v2-core/build/contracts/DefioneToken.json";
+import MasterChef from "defione-core/build/contracts/MasterChef.json";
+import IUniswapV2Router02 from "defione-core/build/contracts/IUniswapV2Router02.json";
+import SushiMaker from "defione-core/build/contracts/SushiMaker.json";
+import IERC20 from "defione-core/build/contracts/IERC20.json";
+import DefioneBridge from "defione-core/build/contracts/DefioneBridge.json";
+import DefioneToken from "defione-core/build/contracts/DefioneToken.json";
 import DelegatorContract from "@/components/farm/Validators/delegateContract.json";
 import { ethers } from "ethers";
 
@@ -23,7 +23,7 @@ const hmy = new Harmony(
   },
 );
 import { mapGetters, mapActions } from 'vuex';
-const { Route, Price, Token, Fetcher, ChainId, Trade, TokenAmount, TradeType, Percent} = require("defione-v2-sdk");
+const { Route, Price, Token, Fetcher, ChainId, Trade, TokenAmount, TradeType, Percent} = require("defione-sdk");
 const { Pools } = require("../store/modules/farm/pools.js");
 
 import { toastMe } from '@/components/toaster/toaster.js';
@@ -31,7 +31,7 @@ import { toastMe } from '@/components/toaster/toaster.js';
 export default {
   created: function () {},
   computed: {
-    ...mapGetters('addressConstants', ['oSWAPMAKER', 'oSWAPCHEF','WONE' , 'UNIROUTERV2', 'DEFIONEBRIDGE','oSWAPTOKEN', 'bBUSD', 'eBUSD', 'eUSDC', 'bUSDC', 'lockedAddress']),
+    ...mapGetters('addressConstants', ['DONEMAKER', 'DONECHEF','WONE' , 'UNIROUTERV2', 'DEFIONEBRIDGE','DONETOKEN', 'bBUSD', 'eBUSD', 'eUSDC', 'bUSDC', 'lockedAddress']),
     ...mapGetters('wallet', ['getStateProvider'])
   },
   methods: {
@@ -112,9 +112,9 @@ export default {
         this.balances = [];
         let chainID = this.getChainID()
 
-        const Oswap = new Token(
+        const Done = new Token(
           chainID,
-          this.oSWAPTOKEN(chainID),
+          this.DONETOKEN(chainID),
           18
         );
         const Busd = new Token(
@@ -123,7 +123,7 @@ export default {
           18
         );
 
-        const pair = await Fetcher.fetchPairData(Oswap, Busd).catch(error => {
+        const pair = await Fetcher.fetchPairData(Done, Busd).catch(error => {
           console.log(error);
           this.error = 1;
           this.errormessage = "Pool Doesn't Exist";
@@ -140,7 +140,7 @@ export default {
         this.balances = [];
         let chainID = this.getChainID()
 
-        const Oswap = new Token(
+        const Done = new Token(
           chainID,
           this.WONE(chainID),
           18
@@ -151,7 +151,7 @@ export default {
           18
         );
 
-        const pair = await Fetcher.fetchPairData(Oswap, Busd).catch(error => {
+        const pair = await Fetcher.fetchPairData(Done, Busd).catch(error => {
           console.log(error);
           this.error = 1;
           this.errormessage = "Pool Doesn't Exist";
@@ -164,15 +164,15 @@ export default {
         
 
     },
-    getOswapPrice: async function(){
+    getDonePrice: async function(){
       return this.getStateDONEPrice()
     },
     getTokenPrices: async function(){
-      let oswap = await this.getDONEPrice();
+      let done = await this.getDONEPrice();
       let one = await this.getOnePrice();
 
       this.setOnePrice(one);
-      this.setDONEPrice(oswap)
+      this.setDONEPrice(done)
     },
     getOneBalance: async function(){
         const provider = this.getProvider()
@@ -353,7 +353,7 @@ export default {
         var totalUnclaimedRewards = ethers.BigNumber.from("0");
 
         const abi = MasterChef.abi;
-        const masterChef = this.oSWAPCHEF(this.getChainID());
+        const masterChef = this.DONECHEF(this.getChainID());
         const contract = new ethers.Contract(masterChef, abi, provider);
 
         for (n in Pools) {
@@ -383,7 +383,7 @@ export default {
       const provider = this.getProvider(true)
       const address = this.getUserAddress();
       const abi = MasterChef.abi;
-      const masterChef = this.oSWAPCHEF(this.getChainID());
+      const masterChef = this.DONECHEF(this.getChainID());
       const contract = new ethers.Contract(masterChef, abi, provider);
       const i = 11;
       const pending = await contract.pendingDefione(i, address).catch(error => {
@@ -438,7 +438,7 @@ export default {
             
             const provider = this.getProvider()
             const signer = provider.getSigner();
-            const contract = new ethers.Contract(this.oSWAPCHEF(this.getChainID()), abi, signer);
+            const contract = new ethers.Contract(this.DONECHEF(this.getChainID()), abi, signer);
             const tx = await contract.collectAll().catch(err => {
 
               var message;
@@ -473,7 +473,7 @@ export default {
           }
           if(this.getWalletType() == 'oneWallet'){
             let options = { gasPrice: "0x3B9ACA00" };
-            const unattachedContract = hmy.contracts.createContract(abi,this.oSWAPCHEF(this.getChainID()));
+            const unattachedContract = hmy.contracts.createContract(abi,this.DONECHEF(this.getChainID()));
             let wallet = new oneWallet()
             await wallet.signin()
             let contract = wallet.attachToContract(unattachedContract)
@@ -500,7 +500,7 @@ export default {
 
           return tx;
     },
-    collectOSWAP: async function(pool){
+    collectDONE: async function(pool){
       let isDefaultWallet = this.checkSignedIn()
       if (isDefaultWallet){
         toastMe('error', {
@@ -512,7 +512,7 @@ export default {
         return 1
       }
       const abi = MasterChef.abi
-      const masterChef = this.oSWAPCHEF(this.getChainID());
+      const masterChef = this.DONECHEF(this.getChainID());
       const pid = parseInt(pool.pid)
 
       if(this.getWalletType() == 'metamask'){
@@ -592,7 +592,7 @@ export default {
         return 1
       }
       const abi = MasterChef.abi
-      const masterChef = this.oSWAPCHEF(this.getChainID());
+      const masterChef = this.DONECHEF(this.getChainID());
       const pid = parseInt(pool.pid)
       let tempToken = {decimals: 18};
       amount = this.getUnits(amount, tempToken)
@@ -755,7 +755,7 @@ export default {
       const abi = SushiMaker.abi;
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
-      const contract = new ethers.Contract(this.oSWAPMAKER(this.getChainID()), abi, signer);
+      const contract = new ethers.Contract(this.DONEMAKER(this.getChainID()), abi, signer);
       
       
 
@@ -801,7 +801,7 @@ export default {
       if(this.getWalletType() == 'metamask'){
          const provider = new ethers.providers.Web3Provider(window.ethereum);
           const signer = provider.getSigner();
-          let makerAddr = this.oSWAPMAKER(this.getChainID())
+          let makerAddr = this.DONEMAKER(this.getChainID())
           
       const contract = new ethers.Contract(makerAddr, abi, signer);
       const tx = await contract.convert(pool.token0address, pool.token1address).catch(err => {
@@ -839,7 +839,7 @@ export default {
       }
       if(this.getWalletType() == 'oneWallet'){
         let options = { gasPrice: "0x3B9ACA00" };
-        const unattachedContract = hmy.contracts.createContract(abi, this.oSWAPMAKER(this.getChainID()));
+        const unattachedContract = hmy.contracts.createContract(abi, this.DONEMAKER(this.getChainID()));
         let wallet = new oneWallet()
         await wallet.signin()
         let contract = wallet.attachToContract(unattachedContract)
@@ -973,11 +973,11 @@ export default {
         check = true
         return [ethers.utils.commify((parseFloat(tt1s).toFixed(2)* onePrice * 2).toFixed(2)), parseFloat(tt1s).toFixed(2)* onePrice * 2];
       }
-      if(pool.token0address == this.oSWAPTOKEN(this.getChainID())){
+      if(pool.token0address == this.DONETOKEN(this.getChainID())){
         check = true
         return [ethers.utils.commify((parseFloat(tt0s).toFixed(2)* donePrice * 2).toFixed(2)), parseFloat(tt0s).toFixed(2) * donePrice * 2];
       }
-      if(pool.token1address == this.oSWAPTOKEN(this.getChainID())){
+      if(pool.token1address == this.DONETOKEN(this.getChainID())){
         check = true
         return [ethers.utils.commify((parseFloat(tt1s).toFixed(2)* donePrice * 2).toFixed(2)), parseFloat(tt1s).toFixed(2) * donePrice * 2];
       }
@@ -1021,7 +1021,7 @@ export default {
                 ),
         new Token(
                 this.getChainID(),
-                this.oSWAPTOKEN(this.getChainID()),
+                this.DONETOKEN(this.getChainID()),
                 18
                 ),
         new Token(
@@ -1115,7 +1115,7 @@ export default {
                 ),
         new Token(
                 this.getChainID(),
-                this.oSWAPTOKEN(this.getChainID()),
+                this.DONETOKEN(this.getChainID()),
                 18
                 ),
         new Token(
@@ -1228,18 +1228,18 @@ export default {
       );
       return trade;
     },
-    getOswapPerBlock: async function(){
+    getDonePerBlock: async function(){
       const provider = this.getProvider()
       const abi = MasterChef.abi;
-      const contract = new ethers.Contract(this.oSWAPCHEF(this.getChainID()), abi, provider);
+      const contract = new ethers.Contract(this.DONECHEF(this.getChainID()), abi, provider);
 
-      const oswapPerBlock = await contract.DefionePerBlock();
+      const donePerBlock = await contract.DefionePerBlock();
       const allocPoints = await contract.totalAllocPoint();
       if(allocPoints.toString() == '0'){
         return 0
       }
       const blocksPerWeek = ethers.BigNumber.from(String(604800 / 2))
-      let rewardsPerWeek = oswapPerBlock.div(allocPoints).mul(blocksPerWeek)
+      let rewardsPerWeek = donePerBlock.div(allocPoints).mul(blocksPerWeek)
       
       return ethers.utils.formatUnits(rewardsPerWeek.toString(), 18).toString()
 
@@ -1248,9 +1248,9 @@ export default {
     getAllocPoints: async function(pool){
       const provider = this.getProvider()
       const abi = MasterChef.abi;
-      const contract = new ethers.Contract(this.oSWAPCHEF(this.getChainID()), abi, provider);
+      const contract = new ethers.Contract(this.DONECHEF(this.getChainID()), abi, provider);
 
-      const oswapPerBlock = await contract.DefionePerBlock();
+      const donePerBlock = await contract.DefionePerBlock();
       const poolInfo = await contract.poolInfo(pool.pid);
 
       
@@ -1261,9 +1261,9 @@ export default {
     getRewardValue: async function(pool, poolWeight) {
   
       
-      const price = await this.getOswapPrice()
+      const price = await this.getDonePrice()
       
-      const aWeekly = await this.getOswapPerBlock()
+      const aWeekly = await this.getDonePerBlock()
      
       const allocpoint = await this.getAllocPoints(pool)
 
@@ -1279,9 +1279,9 @@ export default {
     getRewardValueVal: async function(pool, poolWeight) {
   
       
-      const price = await this.getOswapPrice()
+      const price = await this.getDonePrice()
       
-      const aWeekly = await this.getOswapPerBlock()
+      const aWeekly = await this.getDonePerBlock()
      
       const allocpoint = await this.getAllocPoints(pool)
       
@@ -1622,7 +1622,7 @@ export default {
         return 1
       }
       const abi = MasterChef.abi
-      const masterChef = this.oSWAPCHEF(this.getChainID());
+      const masterChef = this.DONECHEF(this.getChainID());
       const pid = parseInt(pool.pid)
       let tempToken = {decimals: 18};
       amount = this.getUnits(amount, tempToken)
@@ -2521,13 +2521,13 @@ export default {
     },
     getBurnAndTotalSupply: async function() {
       
-      const oSWAPToken = this.oSWAPTOKEN(this.getChainID());
+      const DONEToken = this.DONETOKEN(this.getChainID());
       const burnAddress = "0xdEad000000000000000000000000000000000000";
 
       const abi = DefioneToken.abi
       
       const provider = this.getProvider()
-      const contract = new ethers.Contract(oSWAPToken, abi, provider);
+      const contract = new ethers.Contract(DONEToken, abi, provider);
 
       //Get Burned Balance
       let burnBalance = await contract.burnCount();

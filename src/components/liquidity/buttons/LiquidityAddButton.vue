@@ -15,9 +15,9 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-pointer st5">
         <div class="flex flex-1 items-center justify-center">
-          <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-hover:text-gray-50 dark:group-hover:text-oswapDark-gray">Add</p>
+          <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-hover:text-gray-50 dark:group-hover:text-doneDark-gray">Add</p>
         </div>
-        <i class="las la-plus text-xl text-oswapGreen-dark dark:text-oswapGreen group-hover:text-gray-50 dark:group-hover:text-oswapDark-gray"></i>
+        <i class="las la-plus text-xl text-doneGreen-dark dark:text-doneGreen group-hover:text-gray-50 dark:group-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition>
@@ -28,20 +28,20 @@
       <div class="grab-attention-glowing"></div>
       <div class="grab-attention cursor-wait st5">
         <div class="flex flex-1 items-center justify-center">
-          <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-hover:text-gray-50 dark:group-hover:text-oswapDark-gray">Adding</p>
+          <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-hover:text-gray-50 dark:group-hover:text-doneDark-gray">Adding</p>
         </div>
-        <i class="las la-sync text-xl animate-spin text-oswapGreen-dark dark:text-oswapGreen group-hover:text-gray-50 dark:group-hover:text-oswapDark-gray"></i>
+        <i class="las la-sync text-xl animate-spin text-doneGreen-dark dark:text-doneGreen group-hover:text-gray-50 dark:group-hover:text-doneDark-gray"></i>
       </div>
     </div>
   </transition>
 
   <!-- Added -->
   <transition tag="div" name="approve-btn" class="inline-block absolute">
-    <div v-if="this.getBtnState({add: 'added'})" class="flex w-28 st5 justify-between items-center border border-oswapGreen glow-oswapGreen-light-md space-x-1 p-2 pl-3 rounded-full dark:bg-oswapDark-gray bg-gray-100 cursor-default">
+    <div v-if="this.getBtnState({add: 'added'})" class="flex w-28 st5 justify-between items-center border border-doneGreen glow-doneGreen-light-md space-x-1 p-2 pl-3 rounded-full dark:bg-doneDark-gray bg-gray-100 cursor-default">
       <div class="flex flex-1 items-center justify-center">
-        <p class="text-sm text-oswapGreen">Added</p>
+        <p class="text-sm text-doneGreen">Added</p>
       </div>
-      <i class="las la-check-circle text-xl text-oswapGreen"></i>
+      <i class="las la-check-circle text-xl text-doneGreen"></i>
     </div> 
   </transition>
 </template>

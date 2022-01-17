@@ -17,9 +17,9 @@
         <div class="grab-attention-glowing"></div>
         <div class="grab-attention cursor-pointer">
           <div class="flex flex-1 items-center justify-center">
-            <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray">Migrate</p>
+            <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray">Migrate</p>
           </div>
-          <i class="las las la-route text-xl text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+          <i class="las las la-route text-xl text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
         </div>
       </div>
     </transition> 
@@ -30,20 +30,20 @@
         <div class="grab-attention-glowing"></div>
         <div class="grab-attention cursor-wait">
           <div class="flex flex-1 items-center justify-right">
-            <p class="text-sm text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray">Migrating</p>
+            <p class="text-sm text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray">Migrating</p>
           </div>
-          <i class="las la-sync text-xl animate-spin text-oswapGreen-dark dark:text-oswapGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-oswapDark-gray"></i>
+          <i class="las la-sync text-xl animate-spin text-doneGreen-dark dark:text-doneGreen group-scope-hover:text-gray-50 dark:group-scope-hover:text-doneDark-gray"></i>
         </div>
       </div>
     </transition>
 
     <!-- Migrated -->
     <transition tag="div" name="approve-btn" class="inline-block absolute">
-      <div v-if="buttonState == 'finished'" class="flex w-28 justify-between items-center border border-oswapGreen glow-oswapGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
+      <div v-if="buttonState == 'finished'" class="flex w-28 justify-between items-center border border-doneGreen glow-doneGreen-light-md space-x-1 p-2 pl-3 rounded-full cursor-default">
         <div class="flex flex-1 items-center justify-right">
-          <p class="text-sm text-oswapGreen">Done !</p>
+          <p class="text-sm text-doneGreen">Done !</p>
         </div>
-        <i class="las la-check-circle text-xl text-oswapGreen"></i>
+        <i class="las la-check-circle text-xl text-doneGreen"></i>
       </div> 
     </transition>
   </div>

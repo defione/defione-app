@@ -1,7 +1,7 @@
 <template>
   <transition name="fade-in" appear>
     <div v-if="show" @click="closeClickOutside()" class="fixed w-screen h-screen inset-0 z-150 bg-slightDark bg-opacity-40">
-      <div @mouseenter="setBackLeave()" @mouseleave="setBackEnter()" :class="position" class="flex flex-1 flex-col rounded-3xl shadow-2xl bg-gray-100 dark:bg-slightDark border-l border-oswapGreen" style="min-width: 320px; min-height: 160px;">
+      <div @mouseenter="setBackLeave()" @mouseleave="setBackEnter()" :class="position" class="flex flex-1 flex-col rounded-3xl shadow-2xl bg-gray-100 dark:bg-slightDark border-l border-doneGreen" style="min-width: 320px; min-height: 160px;">
         <!-- Header -->
         <div class="flex items-center justify-between h-12 px-3 text-gray-500 dark:text-gray-200">
           <!-- Title -->
@@ -10,7 +10,7 @@
           </div>
           <!-- Close Icon -->
           <button @click="close()" class="flex text-lg pr-1">
-            <i class="las la-times hover:text-oswapGreen"></i>
+            <i class="las la-times hover:text-doneGreen"></i>
           </button>
         </div>
         <!-- Body -->

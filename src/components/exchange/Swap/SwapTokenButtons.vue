@@ -3,14 +3,14 @@
     <!-- Active buttons if tokens selected -->
     <div v-if="token('token1', 'token2')" class="flex flex-1 items-center justify-between">
       <!-- Reset Tokens Button -->
-      <div @click="this.resetTokens()" class="flex items-center pr-4 rounded-full st5 hover:bg-gray-100 dark:hover:bg-oswapDark-gray bg-opacity-100 hover:bg-opacity-30 cursor-pointer">
+      <div @click="this.resetTokens()" class="flex items-center pr-4 rounded-full st5 hover:bg-gray-100 dark:hover:bg-doneDark-gray bg-opacity-100 hover:bg-opacity-30 cursor-pointer">
         <i class="las la-undo-alt text-lg p-2 text-red-400 rounded-full"></i>
-        <p class="text-sm text-gray-500 dark:text-oswapBlue-light">reset</p>
+        <p class="text-sm text-gray-500 dark:text-doneBlue-light">reset</p>
       </div>
 
-      <div @click="goTo('swapper')" class="flex h-9 st5 items-center space-x-2 ss:space-x-0 xs:space-x-2 rounded-full group bg-gray-100 hover:bg-gray-200 dark:bg-oswapDark-gray dark:hover:bg-gray-900 ss:pl-0 xs:pl-3 cursor-pointer">
-        <p class="ss:hidden xs:block text-sm text-gray-500 dark:text-oswapBlue-light">next</p>
-        <i class="las la-arrow-right text-lg p-2 st5 text-gray-500 dark:text-oswapBlue-light rounded-full bg-gray-100 dark:bg-oswapDark-gray group-hover:bg-oswapGreen dark:group-hover:text-oswapDark-gray group-hover:text-gray-100 border-2 border-gray-200 dark:border-gray-700"></i>
+      <div @click="goTo('swapper')" class="flex h-9 st5 items-center space-x-2 ss:space-x-0 xs:space-x-2 rounded-full group bg-gray-100 hover:bg-gray-200 dark:bg-doneDark-gray dark:hover:bg-gray-900 ss:pl-0 xs:pl-3 cursor-pointer">
+        <p class="ss:hidden xs:block text-sm text-gray-500 dark:text-doneBlue-light">next</p>
+        <i class="las la-arrow-right text-lg p-2 st5 text-gray-500 dark:text-doneBlue-light rounded-full bg-gray-100 dark:bg-doneDark-gray group-hover:bg-doneGreen dark:group-hover:text-doneDark-gray group-hover:text-gray-100 border-2 border-gray-200 dark:border-gray-700"></i>
       </div>
     </div>
 

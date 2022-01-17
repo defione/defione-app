@@ -1,16 +1,16 @@
 <template>
-  <!-- Oswap token info -->
+  <!-- Done token info -->
   <tooltip-me>
     <div class="flex rounded-lg focus:outline-none focus:ring-1 focus:ring-black space-x-2 p-2 px-1 md:px-3 items-center">
-      <img alt="oSwap" src="@/assets/oswap_asset.png" class="ss:h-5 xs:h-6">
-      <p class="ss:hidden xs:block text-xs dark:text-oswapGreen">${{oswapPrice}}</p>
+      <img alt="Done" src="@/assets/done_asset.png" class="ss:h-5 xs:h-6">
+      <p class="ss:hidden xs:block text-xs dark:text-doneGreen">${{donePrice}}</p>
     </div>
 
-    <tooltip-me-content :options="tooltip" class="flex text-xs flex-col divide-y-2 divide-oswapGreen w-72 p-0.5 rounded-lg shadow-xl">
+    <tooltip-me-content :options="tooltip" class="flex text-xs flex-col divide-y-2 divide-doneGreen w-72 p-0.5 rounded-lg shadow-xl">
       <div class="flex flex-col p-3 bg-gray-100 dark:bg-slightDark rounded-md text-gray-500 dark:text-gray-300">
         <div class="ss:flex ss:mb-3 xs:hidden ss:space-x-2 ss:items-center">
-          <img alt="oSwap" src="@/assets/oswap_asset.png" class="h-5">
-          <p>DONE Price: ${{oswapPrice}}</p>
+          <img alt="Done" src="@/assets/done_asset.png" class="h-5">
+          <p>DONE Price: ${{donePrice}}</p>
         </div>
         <div class="flex space-x-2 mb-3 items-center">
           <i class="las la-coins text-xl text-yellow-500"></i>
@@ -32,7 +32,7 @@
           <p>Circ: {{balances.circSupply}} DONE</p>
         </div>
         <div class="flex space-x-2 mb-3 items-center">
-          <i class="las la-globe-europe text-xl text-oswapBlue-light"></i>
+          <i class="las la-globe-europe text-xl text-doneBlue-light"></i>
           <p>Total: {{balances.totalSupply}} DONE</p>
         </div>
         <div class="flex space-x-2 items-center">
@@ -52,7 +52,7 @@
   import { mapGetters } from 'vuex';
 
   export default {
-    name: "Oswap",
+    name: "Done",
     components: {},
     data() {
       return {
@@ -66,7 +66,7 @@
         },
         ttpObj: null,
         ttpRec: null,
-        oswapPrice: 0.00,
+        donePrice: 0.00,
         balances: {
           totalSupply: 0.00,
           circSupply: 0.00,
@@ -121,9 +121,9 @@
         }
       },
       loadData: async function(){
-      this.oswapPrice = await this.getDONEPrice();
+      this.donePrice = await this.getDONEPrice();
       let tempBalances = await this.getBurnAndTotalSupply();
-      this.marketCap = commify((tempBalances.circSupply * this.oswapPrice).toFixed(2));
+      this.marketCap = commify((tempBalances.circSupply * this.donePrice).toFixed(2));
       this.balances.circSupply = commify(tempBalances.circSupply);
       this.balances.totalSupply = commify(tempBalances.totalSupply);
       this.balances.burnedAmount = commify(tempBalances.burnedAmount);

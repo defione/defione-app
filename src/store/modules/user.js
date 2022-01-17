@@ -38,10 +38,10 @@ export default {
 		_switchTheme(state) {
 			if (state.colorTheme == 'dark') { 
 				state.colorTheme = 'light' 
-				localStorage.setItem("oSwap\_theme", state.colorTheme);
+				localStorage.setItem("Done\_theme", state.colorTheme);
 			} else if (state.colorTheme == 'light') { 
 				state.colorTheme = 'dark' 
-				localStorage.setItem("oSwap\_theme", state.colorTheme);
+				localStorage.setItem("Done\_theme", state.colorTheme);
 			};
 		},
 		_setIsScrolled(state, value) {

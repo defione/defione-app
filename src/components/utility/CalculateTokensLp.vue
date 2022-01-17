@@ -2,17 +2,17 @@
     <InputWithValidationLiquidity :input="amount0" :errors="errors0" @catchInput="inputAmount0" :rounded="'rounded-xl'" :placeholder="pair.name[0]" :errorTop="'mt-10 z-90'">
 
     </InputWithValidationLiquidity>
-    <span v-if="price !== '0'" class="ml-2 text-xs text-oswapGreen-dark">${{price}}</span>
+    <span v-if="price !== '0'" class="ml-2 text-xs text-doneGreen-dark">${{price}}</span>
     <InputWithValidationLiquidity :input="amount1" :errors="errors1" @catchInput="inputAmount1" :rounded="'rounded-xl'" :placeholder="pair.name[1]" :errorTop="'mt-10 z-90'" >
 
     </InputWithValidationLiquidity>
-    <span  v-if="price !== '0'" class="ml-2 text-xs text-oswapGreen-dark">${{price}}</span>
-    <div @click="calculateRewards()" :class="!fetching? '':'cursor-not-allowed'" class="flex h-10 items-center bg-gray-100 dark:bg-oswapDark-gray group-scope-hover:bg-oswapGreen text-oswapGreen-dark dark:text-oswapGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
+    <span  v-if="price !== '0'" class="ml-2 text-xs text-doneGreen-dark">${{price}}</span>
+    <div @click="calculateRewards()" :class="!fetching? '':'cursor-not-allowed'" class="flex h-10 items-center bg-gray-100 dark:bg-doneDark-gray group-scope-hover:bg-doneGreen text-doneGreen-dark dark:text-doneGreen border-l border-black border-opacity-10 cursor-pointer px-3 rounded-xl">
         <transition name="fall" appear>
-            <p v-if="!fetching" class="text-sm dark:group-scope-hover:text-oswapDark-gray group-scope-hover:text-gray-100">Calculate Rewards</p>
+            <p v-if="!fetching" class="text-sm dark:group-scope-hover:text-doneDark-gray group-scope-hover:text-gray-100">Calculate Rewards</p>
             <div v-else class="flex flex-1 justify-start items-center space-x-2">
-                <p class="text-oswapGreen-dark">Fetching</p>
-                <i class="las la-sync text-xl animate-spin text-oswapGreen-dark dark:text-oswapGreen"></i>
+                <p class="text-doneGreen-dark">Fetching</p>
+                <i class="las la-sync text-xl animate-spin text-doneGreen-dark dark:text-doneGreen"></i>
             </div>
         </transition>
     </div>

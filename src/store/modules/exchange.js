@@ -4,7 +4,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   // --------------------------------------------------------------------------
-  // Everything Related to Swap Component -------------------------------------
+  // Everything Related tDone Component -------------------------------------
   // to map this functions to components you must add:
   // ...mapGetters('exchange', ['functionName, ...'])
   // then to call the function in the component: this.functionName()
@@ -152,7 +152,7 @@ export default {
 
   modules: {
     // ------------------------------------------------------------------------
-    // Everything Related to Swapper Component --------------------------------
+    // Everything Related tDoneper Component --------------------------------
     // ------------------------------------------------------------------------
     swapper: {
       namespaced: true,
