@@ -18,7 +18,7 @@
         </div>
         <div class="flex space-x-2 mb-3 items-center">
           <i class="las la-fire-alt text-xl text-red-400"></i>
-          <p>Tokens Burnt V2: {{balances.burnedAmount}} DONE</p>
+          <p>Tokens Burnt: {{balances.burnedAmount}} DONE</p>
         </div>
         <div class="flex space-x-2 items-center">
           <i class="las la-fire-alt text-xl text-red-400"></i>

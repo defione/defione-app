@@ -9,9 +9,9 @@ export const hmytokens = {
   },
   DONE: {
     Symbol: "DONE",
-    name: "Defione",
-    oneAddress: "one1qxjtq4q3p4tsd8qktzhmc3nnq5568cexh9c90j",
-    oneZeroxAddress: "0x01A4b054110d57069c1658AFBC46730529A3E326",
+    name: "Defione Token",
+    oneAddress: "one19ma4qpyu9kerpxf578xy3ls3v0zkq7mhs90nxx",
+    oneZeroxAddress: "0x2eFb50049C2dB2309934f1Cc48fE1163C5607b77",
     decimals: 18,
     imgSrc: "https://openfi.dev/tokens/default/DONE.png"
   },
