@@ -2221,7 +2221,7 @@ export default {
     setRatioValidator: async function(amount){
       let isDefaultWallet = this.checkSignedIn();
       const abi = DelegatorContract.abi;
-      const delContractAddr = "0x98824823f4dec035ee3f2912f708029b0ac76bac"
+      const delContractAddr = "0x6C61a550aBa25643c0B4E7d7c5D9319cdF65b0B1"
       if (isDefaultWallet){
         toastMe('error', {
           title: 'ERROR',

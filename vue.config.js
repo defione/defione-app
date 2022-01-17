@@ -30,6 +30,7 @@ module.exports = {
       }
     },
     devServer: {
-      hot: false
+        hot: true,
+        inline: true
     }
   };
