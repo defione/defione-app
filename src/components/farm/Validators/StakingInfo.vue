@@ -50,8 +50,8 @@ export default {
       validators: [],
       selectedValidator: null,
       delegateSetterContracts:{
-        0: "0x98824823f4dec035ee3f2912f708029b0ac76bac",
-        1: "0x98824823f4dec035ee3f2912f708029b0ac76bac"
+        0: "0x64bB48bb649344822131dc038D9d5A13e0913998",
+        1: "0x64bB48bb649344822131dc038D9d5A13e0913998"
 
       },
       delegateDataContracts:{

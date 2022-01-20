@@ -1,8 +1,8 @@
 export const pools = {
   DONEWONE: {
     pair: "DONE/ONE",
-    pairaddress: "0xF237c4Ffc7F761eD07D665567DcCF6522B96C1E7",
-    token0address: "0x01A4b054110d57069c1658AFBC46730529A3E326",
+    pairaddress: "0xC58DE44253765a0dB2Fc1E3968adfAB49Be7F200",
+    token0address: "0x2eFb50049C2dB2309934f1Cc48fE1163C5607b77",
     token1address: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
     imgtoken0: "https://openfi.dev/tokens/default/DONE.png",
     imgtoken1: "https://openfi.dev/tokens/default/ONE.png",
